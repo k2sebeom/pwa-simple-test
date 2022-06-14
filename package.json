@@ -1,6 +1,7 @@
 {
   "name": "mui-practice",
   "version": "0.1.0",
+  "homepage": "https://k2sebeom.github.io/pwa-simple-test/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.3",
@@ -10,17 +11,31 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^4.0.0",
     "rc-slider": "^10.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "workbox-background-sync": "^6.5.3",
+    "workbox-broadcast-update": "^6.5.3",
+    "workbox-cacheable-response": "^6.5.3",
+    "workbox-core": "^6.5.3",
+    "workbox-expiration": "^6.5.3",
+    "workbox-google-analytics": "^6.5.3",
+    "workbox-navigation-preload": "^6.5.3",
+    "workbox-precaching": "^6.5.3",
+    "workbox-range-requests": "^6.5.3",
+    "workbox-routing": "^6.5.3",
+    "workbox-strategies": "^6.5.3",
+    "workbox-streams": "^6.5.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

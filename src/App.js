@@ -4,7 +4,7 @@ import './App.css';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import { useState, forwardRef } from 'react';
-import { Tooltip, IconButton } from '@mui/material';
+import { Tooltip, IconButton, Button } from '@mui/material';
 import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 
 
@@ -30,7 +30,10 @@ function App() {
       >
 
       </div>
-      <div>
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column'
+      }}>
         <Tooltip title="Hello" arrow>
           <IconButton onClick={() => {
             window.alert('Dont touch me!');
@@ -38,6 +41,12 @@ function App() {
             <AccessAlarmIcon />
           </IconButton>
         </Tooltip>
+        <Button variant='contained' onClick={() => {
+          if(!window.installPrompt) {
+            return;
+          }
+          window.installPrompt.prompt();
+        }}>Install App</Button>
       </div>
     </div>
   );
