@@ -41,12 +41,12 @@ function App() {
             <AccessAlarmIcon />
           </IconButton>
         </Tooltip>
-        <Button variant='contained' onClick={() => {
-          if(!window.installPrompt) {
-            return;
-          }
-          window.installPrompt.prompt();
-        }}>Install App</Button>
+        {!window.installPrompt ? null : (
+          <Button variant='contained' onClick={() => {
+            window.installPrompt.prompt();
+          }}>Install App</Button>
+        )}
+        
       </div>
     </div>
   );
